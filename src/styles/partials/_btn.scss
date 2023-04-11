@@ -1,0 +1,17 @@
+@use './variables' as *;
+
+.btn-1 {
+    padding: 9px 15px;
+    background-color: $bg-secondary;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.btn-2 {
+    padding: 9px 15px;
+    border: solid 1px $bg-secondary;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}

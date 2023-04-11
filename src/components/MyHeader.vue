@@ -23,12 +23,19 @@
 
         </div>
     </div>
+    
+        <Jumbotron />
+    
 </template>
 
 <script>
+    import Jumbotron from './Jumbotron.vue'
 
     export default {
-        name: 'MyHeader'
+        name: 'MyHeader',
+        components : {
+            Jumbotron
+        }
     }
 
 </script>
