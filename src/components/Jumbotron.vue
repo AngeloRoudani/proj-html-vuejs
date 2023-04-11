@@ -76,7 +76,7 @@ ul {
     li {
         display: inline-block;
         text-transform: uppercase;
-        margin-left: 2.5rem;
+        margin-left: 2rem;
     }
 }
 
@@ -94,8 +94,8 @@ ul {
 .m-top-2 {
     margin-top: 2rem;
 } 
-.btn-1 {
-    margin-right: 1rem;
+.btn-2 {
+    margin-left: 1rem;
 }
 
 h1 {
