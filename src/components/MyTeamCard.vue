@@ -47,7 +47,7 @@
     .role {
         text-transform: uppercase;
         color: $second-grey;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .member-card h4, .role {

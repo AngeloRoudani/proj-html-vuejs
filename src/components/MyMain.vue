@@ -2,11 +2,15 @@
     <section>
         <!--sezione video-->
         <div class="container">
-            <h6>Introduction video</h6>
-            <h1 class="mt-2">Advisory <span class="highlighted">Performance</span></h1>
-            <p class="mt-2">Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making</p>
+            <div class="video-title">
+                <SectionTitle :smallTitle="'Introduction video'"
+                            :mainPart="'Advisory'"
+                            :highlightedPart="'Performance'"
+                            :paragraph="'Financial executives need to review their strategies, operating models and capabilities so that their areas can generate sound information for better decision making'"
+                />
+            </div>
             <div class="video-image mt-2">
-                <img :src="getImageUrl()" alt="video">
+                <img :src="getImageUrl(videoImage)" alt="video">
                 <i class="fa-solid fa-play play-green"></i>
                 <i class="fa-solid fa-play play-second"></i>
             </div>
@@ -17,7 +21,7 @@
     <section id="stats">
         <!--sezione stats azienda-->
         <div class="container">
-            <h6>What are we doing</h6>
+            <h5>What are we doing</h5>
             <h1 class="mt-2 stats-title"><span class="highlighted">Results</span> in Numbers</h1>
             <div class="stats-info">
                 <div v-for="(element,index) in statsList" class="minicard" :key="index">
@@ -33,7 +37,7 @@
         <!--sezione servizi e prodotti-->
         <div class="container">
             <div class="title-wrapper">
-                <h6>Our business area</h6>
+                <h5>Our business area</h5>
                 <h1 class="mt-2 stats-title">Excellence in <span class="highlighted">Services</span></h1>
                 <p class="mt-2 ">We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals.These are some options that you can hire.</p>
                 <span class="btn-2">see all</span>
@@ -54,9 +58,11 @@
         <!--sezione del Team-->
         <div class="container">
             <div class="main-team">
-                <h6>We like what we do</h6>
-                <h1 class="mt-2"><span class="highlighted">Team</span> of Experts</h1>
-                <p class="mt-2">Ethics and integrity are the bases on which our professionals build their careers. The are fundamentals tha become daily attitudes.</p>
+                <SectionTitle :smallTitle="'We like what we do'"
+                                :lastPart="'of Experts'"
+                                :highlightedPart="'Team'"
+                                :paragraph="'Ethics and integrity are the bases on which our professionals build their careers. The are fundamentals that become daily attitudes.'
+                "/>
                 <div class="team-list">
                     <div v-for="(member, index) in team" class="team-member" :key="index">
                         <MyTeamCard 
@@ -79,20 +85,46 @@
         </div>
 
     </section>
+
+    <section id="news">
+        <!--sezione delle news-->
+        <div class="container">
+            <div class="news-title">
+                <div class="title-wrapper">
+                    <SectionTitle :smallTitle="'Our editorial content'"
+                                    :mainPart="'Latest'"
+                                    :highlightedPart="'News'"
+                                    :paragraph="'Every week we publish content about what is best in the business world'"
+                        />
+                </div>
+                <span class="btn-1">see all</span>
+            </div>
+            <article class="articles">
+                <div v-for="(element,index) in article" class="article" :key="index">
+                    <img :src="getImageUrl(element.image)" alt="immagine articolo">
+                    <h3>{{ element.title }}</h3>
+                </div>
+            </article>
+
+        </div>
+    </section>
 </template>
 
 <script>
 import MyServiceCard from './MyServiceCard.vue';
 import MyTeamCard from './MyTeamCard.vue';
+import SectionTitle from './SectionTitle.vue';
 
     export default {
         name: 'MyMain',
         components : {
             MyServiceCard,
-            MyTeamCard
+            MyTeamCard,
+            SectionTitle
         },
         data () {
             return {
+                videoImage: 'video-1.jpg',
                 statsList: [
                     {
                         quantity: 128,
@@ -164,12 +196,26 @@ import MyTeamCard from './MyTeamCard.vue';
                         role: 'ceo & president',
                         image: 'team-4.jpg'
                     }
+                ],
+                article: [
+                    {
+                        image: 'news-1.jpg',
+                        title: 'Increasing creativity is possible for everyone'
+                    },
+                    {
+                        image: 'news-2.jpg',
+                        title: 'Because market research is part of the business plan'
+                    },
+                    {
+                        image: 'news-3.jpg',
+                        title: 'Working from home is now a trend'
+                    }
                 ]
             }
         },
         methods: {
-            getImageUrl() {
-                return new URL(`../assets/video-1.jpg`, import.meta.url).href;
+            getImageUrl(name) {
+                return new URL(`../assets/${name}`, import.meta.url).href;
             }
         }
     }
