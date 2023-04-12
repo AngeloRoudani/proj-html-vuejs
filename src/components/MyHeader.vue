@@ -1,7 +1,7 @@
 <template>
     <div class="container_top">
         <div class="infobar">
-
+            <!--top Header con informazioni-->
             <div class="open_hours">
                 <span><i class="fa-solid fa-clock"></i></span>
                 <span>Open Hours: Mon - Sat - 9:00 - 18:00</span>
@@ -23,7 +23,7 @@
 
         </div>
     </div>
-    
+    <!--introduzione Jumbotron-->
         <Jumbotron />
     
 </template>
