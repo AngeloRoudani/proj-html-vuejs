@@ -1,5 +1,6 @@
 <template>
     <section>
+        <!--sezione video-->
         <div class="container">
             <h6>Introduction video</h6>
             <h1 class="mt-2">Advisory <span class="highlighted">Performance</span></h1>
@@ -10,9 +11,21 @@
                 <i class="fa-solid fa-play play-second"></i>
             </div>
         </div>
+
     </section>
-    <section>
-        
+
+    <section id="stats">
+        <!--sezione stats azienda-->
+        <div class="container">
+            <h6>What are we doing</h6>
+            <h1 class="mt-2 stats-title"><span class="highlighted">Results</span> in Numbers</h1>
+            <div class="stats-info">
+                <div v-for="(element,index) in statsList" class="minicard" :key="index">
+                    <div class="number">{{ element.quantity }}</div>
+                    <div class="info-name">{{ element.label }}</div>
+                </div>
+            </div>
+        </div>
     </section>
     <section>
         
@@ -25,7 +38,24 @@
         name: 'MyMain',
         data () {
             return {
-
+                statsList: [
+                    {
+                        quantity: 128,
+                        label: 'Certifications'
+                    },
+                    {
+                        quantity: 230,
+                        label: 'Employees'
+                    },
+                    {
+                        quantity: 517,
+                        label: 'Customers'
+                    },
+                    {
+                        quantity: 94,
+                        label: 'Coutry Served'
+                    }
+                ]
             }
         },
         methods: {
@@ -62,12 +92,12 @@ h6 {
 h1 {
     font-weight: 900;
     font-size: 35px;
-    .highlighted {
-        display: inline-block;
-        padding: .2rem;
-        background-color: $bg-secondary;
-        color: $bg-primary;
-    }
+}
+.highlighted {
+    display: inline-block;
+    padding: .2rem;
+    background-color: $bg-secondary;
+    color: $bg-primary;
 }
 
 p {
@@ -101,6 +131,41 @@ p {
     position: absolute;
     left: 47%;
     bottom: 43%;
+}
+
+/*statistiche azienda*/
+#stats {
+    background-image: url('../assets/bg-3.jpg');
+    background-size: cover;
+}
+
+.stats-title {
+    color: $first-color;
+    span {
+        color:$first-color;
+    }
+}
+.stats-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 4rem;
+}
+
+.minicard {
+    width: calc(100%/ 4);
+}
+
+.number {
+    color: $text-secondary;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.info-name {
+    color: $first-color;
+    text-transform: uppercase;
+    font-weight: bolder;
 }
 
 
