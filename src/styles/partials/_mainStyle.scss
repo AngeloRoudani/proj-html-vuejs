@@ -142,9 +142,15 @@ p {
 }
 
 /*sezione Team*/ 
+
+#team .container {
+    display: flex;
+}
+
 .main-team {
     width: 70%;
     text-align: left;
+    display: inline-block;
 }
 .team-list {
     display: flex;
@@ -154,4 +160,29 @@ p {
 .team-member {
     width: calc(100% / 2);
     margin: 1.5rem 0 ;
+}
+
+.main-team p {
+    text-align: left;
+    margin-left: 0;
+}
+
+.president-speech {
+    display: inline-block;
+    padding: 2rem;
+    height: 400px;
+    width: 30%;
+    text-align: left;
+    background-color: $bg-primary;
+    color: $first-color;
+    border-radius: 3px;
+    margin-top: 3rem;
+    div {
+        display: block;
+        color: $first-color;
+        width: 100%;
+        text-align: left;
+        margin: 1rem 0;
+        font-size: 14px;
+    }
 }

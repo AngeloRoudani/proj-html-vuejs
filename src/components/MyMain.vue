@@ -68,7 +68,11 @@
                 </div>
             </div>
             <div class="president-speech">
-
+                <h3>President Speech</h3>
+                <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor quas quasi ratione est iusto quae assumenda necessitatibus magni non!</div>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque, blanditiis id at dignissimos architecto exercitationem nostrum doloribus placeat, voluptatibus unde.</div> 
+                <div> Consequuntur sunt perspiciatis nam incidunt distinctio ipsum, illum recusandae.</div>
+                <h5>T.Johnson</h5>
             </div>
 
         </div>
@@ -172,7 +176,7 @@ import MyTeamCard from './MyTeamCard.vue';
 </script>
 
 <style lang="scss" scoped>
- @use '../styles/partials/mainStyle';
+ @use '../styles/partials/mainStyle' as *;
 
 
 </style>
