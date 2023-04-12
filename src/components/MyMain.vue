@@ -27,15 +27,38 @@
             </div>
         </div>
     </section>
-    <section>
+
+
+    <section id="servicies">
+        <!--sezione servizi e prodotti-->
+        <div class="container">
+            <div class="title-wrapper">
+                <h6>Our business area</h6>
+                <h1 class="mt-2 stats-title">Excellence in <span class="highlighted">Services</span></h1>
+                <p class="mt-2 ">We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals.These are some options that you can hire.</p>
+                <span class="btn-2">see all</span>
+            </div>
+            <div class="services-list">
+                <div v-for="(element,index) in servicies" class="product" :key="index"> 
+                    <MyServiceCard 
+                                :image="element.image"
+                                :title="element.title"
+                                :info="element.info"/>
+                </div>
+            </div>
+        </div>
         
     </section>
 </template>
 
 <script>
+import MyServiceCard from './MyServiceCard.vue';
 
     export default {
         name: 'MyMain',
+        components : {
+            MyServiceCard
+        },
         data () {
             return {
                 statsList: [
@@ -55,6 +78,38 @@
                         quantity: 94,
                         label: 'Coutry Served'
                     }
+                ],
+                servicies: [
+                    {
+                        image: 'fa-solid fa-network-wired',
+                        title: 'Audit & Assurance',
+                        info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    },
+                    {
+                        image: 'fa-solid fa-briefcase',
+                        title: 'Financial Advisory',
+                        info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    },
+                    {
+                        image: 'fa-solid fa-chart-simple',
+                        title: 'Analitics and M&A',
+                        info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    },
+                    {
+                        image: 'fa-solid fa-plane',
+                        title: 'Middle Marketing',
+                        info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    },
+                    {
+                        image: 'fa-solid fa-globe',
+                        title: 'Legal consulting',
+                        info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    },
+                    {
+                        image: 'fa-solid fa-inbox',
+                        title: 'Regulatory Risk',
+                        info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
+                    }
                 ]
             }
         },
@@ -69,6 +124,7 @@
 
 <style lang="scss" scoped>
  @use '../styles/partials/variables' as *;
+ @use '../styles/partials/btn';
 
 /*utilities*/
 
@@ -139,6 +195,10 @@ p {
     background-size: cover;
 }
 
+#stats .container {
+    text-align: center;
+}
+
 .stats-title {
     color: $first-color;
     span {
@@ -148,8 +208,7 @@ p {
 .stats-info {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    margin: 4rem;
+    margin-top: 4rem;
 }
 
 .minicard {
@@ -167,7 +226,45 @@ p {
     text-transform: uppercase;
     font-weight: bolder;
 }
+/*servizi e prodotti*/
 
+#servicies {
+    background-color: $first-black;
+}
+
+#servicies p {
+    color: $text-third;
+    text-align: left;
+    display: inline-block;
+}
+
+#servicies .container {
+    text-align: left;
+    padding: 4rem 0;
+}
+
+.title-wrapper {
+    width: 91%; 
+    margin: auto;
+}
+
+#servicies .btn-2 {
+    color: $first-color;
+    margin-left: 200px;
+}
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem auto;
+}
+
+.product {
+    width: calc((100% / 3.5));
+    margin: 1rem;
+    background-color: $second-grey;
+    border-radius: 5px;
+}
 
 
 
