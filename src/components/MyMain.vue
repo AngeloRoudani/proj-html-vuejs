@@ -49,15 +49,42 @@
         </div>
         
     </section>
+
+    <section id="team">
+        <!--sezione del Team-->
+        <div class="container">
+            <div class="main-team">
+                <h6>We like what we do</h6>
+                <h1 class="mt-2"><span class="highlighted">Team</span> of Expert</h1>
+                <p class="mt-2">Ethics and integrity are the bases on which our professionals build their careers. The are fundamentals tha become daily attitudes.</p>
+                <div class="team-list">
+                    <div v-for="(member, index) in team" class="team-member" :key="index">
+                        <MyTeamCard 
+                            :teamImage="member.image" 
+                            :teamRole="member.role"  
+                            :teamName="member.name"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="president-speech">
+
+            </div>
+
+        </div>
+
+    </section>
 </template>
 
 <script>
 import MyServiceCard from './MyServiceCard.vue';
+import MyTeamCard from './MyTeamCard.vue';
 
     export default {
         name: 'MyMain',
         components : {
-            MyServiceCard
+            MyServiceCard,
+            MyTeamCard
         },
         data () {
             return {
@@ -110,6 +137,28 @@ import MyServiceCard from './MyServiceCard.vue';
                         title: 'Regulatory Risk',
                         info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'
                     }
+                ],
+                team: [
+                    {
+                        name: 'David Cooper',
+                        role: 'cto & co-founder',
+                        image: 'team-1.jpg'
+                    },
+                    {
+                        name: 'Oliver Jones',
+                        role: 'chief procurement',
+                        image: 'team-3.jpg'
+                    },
+                    {
+                        name: 'Emma Lopez',
+                        role: 'chief marketing',
+                        image: 'team-2.jpg'
+                    },
+                    {
+                        name: 'T. Johnson',
+                        role: 'ceo & president',
+                        image: 'team-4.jpg'
+                    }
                 ]
             }
         },
@@ -123,149 +172,7 @@ import MyServiceCard from './MyServiceCard.vue';
 </script>
 
 <style lang="scss" scoped>
- @use '../styles/partials/variables' as *;
- @use '../styles/partials/btn';
-
-/*utilities*/
-
-.mt-2 {
-    margin-top: 2rem;
-}
-/*video section*/
-.container {
-    max-width: 1170px;
-    margin: auto;
-    padding: 5rem;
-    text-align: center;
-}
-
-h6 {
-    color: $bg-primary;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-h1 {
-    font-weight: 900;
-    font-size: 35px;
-}
-.highlighted {
-    display: inline-block;
-    padding: .2rem;
-    background-color: $bg-secondary;
-    color: $bg-primary;
-}
-
-p {
-    color: $second-grey;
-    max-width: 70%;
-    margin: auto;
-    text-align: center;
-    font-size: 14px;
-}
-
-.video-image {
-    max-width: 80%;
-    margin: auto;
-    margin-top: 2rem;
-    position: relative;
-    img {
-        width: 100%;
-    }
-}
-.play-green {
-    font-size: 60px;
-    color: $bg-primary;
-    position: absolute;
-    left: 47%;
-    bottom: 45%;
-}
-
-.play-second {
-    font-size: 60px;
-    color: $play-color;
-    position: absolute;
-    left: 47%;
-    bottom: 43%;
-}
-
-/*statistiche azienda*/
-#stats {
-    background-image: url('../assets/bg-3.jpg');
-    background-size: cover;
-}
-
-#stats .container {
-    text-align: center;
-}
-
-.stats-title {
-    color: $first-color;
-    span {
-        color:$first-color;
-    }
-}
-.stats-info {
-    width: 100%;
-    display: flex;
-    margin-top: 4rem;
-}
-
-.minicard {
-    width: calc(100%/ 4);
-}
-
-.number {
-    color: $text-secondary;
-    font-size: 40px;
-    font-weight: bolder;
-}
-
-.info-name {
-    color: $first-color;
-    text-transform: uppercase;
-    font-weight: bolder;
-}
-/*servizi e prodotti*/
-
-#servicies {
-    background-color: $first-black;
-}
-
-#servicies p {
-    color: $text-third;
-    text-align: left;
-    display: inline-block;
-}
-
-#servicies .container {
-    text-align: left;
-    padding: 4rem 0;
-}
-
-.title-wrapper {
-    width: 91%; 
-    margin: auto;
-}
-
-#servicies .btn-2 {
-    color: $first-color;
-    margin-left: 200px;
-}
-.services-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 2rem auto;
-}
-
-.product {
-    width: calc((100% / 3.5));
-    margin: 1rem;
-    background-color: $second-grey;
-    border-radius: 5px;
-}
-
+ @use '../styles/partials/mainStyle';
 
 
 </style>
