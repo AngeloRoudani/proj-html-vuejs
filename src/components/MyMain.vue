@@ -55,7 +55,7 @@
         <div class="container">
             <div class="main-team">
                 <h6>We like what we do</h6>
-                <h1 class="mt-2"><span class="highlighted">Team</span> of Expert</h1>
+                <h1 class="mt-2"><span class="highlighted">Team</span> of Experts</h1>
                 <p class="mt-2">Ethics and integrity are the bases on which our professionals build their careers. The are fundamentals tha become daily attitudes.</p>
                 <div class="team-list">
                     <div v-for="(member, index) in team" class="team-member" :key="index">
@@ -73,6 +73,7 @@
                 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt eaque, blanditiis id at dignissimos architecto exercitationem nostrum doloribus placeat, voluptatibus unde.</div> 
                 <div> Consequuntur sunt perspiciatis nam incidunt distinctio ipsum, illum recusandae.</div>
                 <h5>T.Johnson</h5>
+                <i class="fa-solid fa-quote-right"></i>
             </div>
 
         </div>
