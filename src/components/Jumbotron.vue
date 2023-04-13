@@ -4,7 +4,7 @@
             <div class="navbar">
                 <img :src="getImageUrl()" alt="logo" class="logo">
                 <ul>
-                    <li v-for="(element, index) in navElement" class="list-element" :key="index">{{ element }}</li>
+                    <li v-for="(element, index) in navElement" class="list-element" :key="index"><a class="links" :href="element.url">{{ element.link }}</a></li>
                     <li><i class="fa-regular fa-user"></i></li>
                     <li class="btn-1">Get in touch</li>
                 </ul>
@@ -28,11 +28,26 @@
         data () {
             return {
                 navElement: [
-                    'home',
-                    'About',
-                    'services',
-                    'team',
-                    'blog'
+                    {
+                        link:'home',
+                        url: '#'
+                    },
+                    {
+                        link:'About',
+                        url: '#about'
+                    },
+                    {
+                        link:'services',
+                        url:'#services'
+                    },
+                    {
+                        link:'team',
+                        url:'#team'
+                    },
+                    {
+                        link:'blog',
+                        url:'#newsletter'
+                    }
                 ]
             }
         },
@@ -82,6 +97,12 @@ ul {
 
 .logo {
     width: 150px;
+}
+
+.links {
+    text-decoration: none;
+    color: $first-color;
+    cursor: pointer;
 }
 
 .title {

@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="about">
         <!--sezione video-->
         <div class="container">
             <div class="video-title">
