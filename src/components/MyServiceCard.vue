@@ -41,6 +41,21 @@
     .fa-arrow-right {
         position: relative;
         left: 200px;
+        cursor: pointer;
+    }
+
+    .fa-arrow-right:hover {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 2px 0 0 3px;
+        background-color: $text-secondary;
+        color: $first-color;
+    }
+
+    .fa-arrow-right:hover + .icon {
+        color: $first-color;
     }
 
     h3 {

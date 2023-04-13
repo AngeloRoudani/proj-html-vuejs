@@ -8,6 +8,7 @@
     font-weight: bold;
     color: $first-color;
     font-size: 16px;
+    cursor: pointer;
 }
 
 .btn-2 {
@@ -16,4 +17,10 @@
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-2:hover {
+    background-color: $text-secondary;
+    color: $first-color;
 }
