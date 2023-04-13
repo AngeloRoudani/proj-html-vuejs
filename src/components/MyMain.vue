@@ -108,19 +108,41 @@
 
         </div>
     </section>
+
+    <section id="newsletter">
+        <!--sezione "iscriviti alla newsletter"-->
+        <div class="container">
+            <div class="title-wrapper">
+                <SectionTitle2 :smallTitle2="'Newsletter'"
+                                :lastPart2="'First'"
+                                :highlightedPart2="'Know'"
+                                :paragraph2="'Follow closely and receive content about our company and the news of the current market.'"
+                    />
+            </div>
+            <div class="little-form">
+                <input class="input-text" type="text" placeholder="Name">
+                <input class="input-text" type="text" placeholder="Email">
+                <span class="btn-1">subscribe</span>
+            </div>
+        </div>
+
+    </section>
 </template>
 
 <script>
+
 import MyServiceCard from './MyServiceCard.vue';
 import MyTeamCard from './MyTeamCard.vue';
 import SectionTitle from './SectionTitle.vue';
+import SectionTitle2 from './SectionTitle2.vue';
 
     export default {
         name: 'MyMain',
         components : {
             MyServiceCard,
             MyTeamCard,
-            SectionTitle
+            SectionTitle,
+            SectionTitle2
         },
         data () {
             return {

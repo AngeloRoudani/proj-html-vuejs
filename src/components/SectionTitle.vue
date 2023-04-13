@@ -1,7 +1,9 @@
 <template>
-    <h5>{{ smallTitle }}</h5>
-    <h1 class="mt-2 stats-title">{{ mainPart }} <span class="highlighted">{{ highlightedPart }}</span> {{ lastPart }}</h1>
-    <p class="mt-2">{{ paragraph }}</p>
+    <div class="version-1">
+        <h5>{{ smallTitle }}</h5>
+        <div class="mt-1 stats-title">{{ mainPart }} <span class="highlighted"> {{ highlightedPart }}</span> {{ lastPart }}</div>
+        <p class="mt-1 p-grey">{{ paragraph }}</p>
+    </div>
 
 </template>
 
@@ -14,7 +16,7 @@
             mainPart: String,
             highlightedPart: String,
             paragraph: String,
-            lastPart: String
+            lastPart: String,
         }
     }
 
@@ -22,8 +24,8 @@
 
 <style lang="scss" scoped>
     @use '../styles/partials/variables' as *;
-.mt-2 {
-margin-top: 2rem;
+.mt-1 {
+margin-top: 1.5rem;
 }
 
 h5 {
@@ -32,24 +34,23 @@ h5 {
     font-weight: bold;
 }
 
-h1 {
+.stats-title {
     font-weight: 900;
     font-size: 35px;
 }
 
 .highlighted {
-    display: inline-block;
-    padding: .2rem;
+    padding: .2rem .3rem;
     background-color: $bg-secondary;
     color: $bg-primary;
+    border-radius: 3px;
 }
 
-p {
+.p-grey {
     color: $second-grey;
     font-size: 14px;
     display: inline-block;
 }
 
-    
 
 </style>

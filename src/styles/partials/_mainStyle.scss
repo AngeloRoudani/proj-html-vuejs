@@ -199,6 +199,7 @@ p {
     }
     h5 {
         display: inline-block;
+        color: $first-color;
     }
     i {
         color: $first-black-t;
@@ -255,5 +256,42 @@ p {
         z-index: 99;
         color: $first-color;
     }
+}
+
+/*sezione newsletter*/
+
+#newsletter {
+    background-color: $first-black;
+}
+
+#newsletter .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#newsletter .title-wrapper, #newsletter .little-form  {
+    text-align: left;
+    width: calc(100% / 2.5);
+    color: $first-color;
+}
+
+.input-text {
+    width: 80%;
+    display: block;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: $second-grey;
+    border: none;
+    border-radius: 3px;
+    color: $first-color;
+}
+
+#newsletter .btn-1 {
+    display: inline-block;
+}
+
+#newsletter .highlighted {
+    color: $first-color;
 }
 
