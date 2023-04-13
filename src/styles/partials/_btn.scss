@@ -7,11 +7,12 @@
     text-transform: uppercase;
     font-weight: bold;
     color: $first-color;
+    font-size: 16px;
 }
 
 .btn-2 {
     padding: 9px 15px;
-    border: solid 1px $play-color;
+    border: solid 1px $bg-primary;
     border-radius: 4px;
     text-transform: uppercase;
     font-weight: bold;

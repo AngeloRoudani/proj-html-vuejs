@@ -7,6 +7,14 @@
     margin-top: 2rem;
 }
 
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.g-text {
+    color: $second-grey;
+}
+
 h5 {
     color: $text-secondary;
     text-transform: uppercase;
@@ -293,5 +301,58 @@ p {
 
 #newsletter .highlighted {
     color: $first-color;
+}
+
+/*sezione "message"*/
+#message .container {
+    display: flex;
+}
+
+#message .left-part {
+    text-align: left;
+    width: 60%;
+}
+#message .title-wrapper {
+    width: 100%;
+}
+
+.form-wrapper {
+    margin-top: 2rem;
+}
+
+#message .btn-1 {
+    display: inline-block;
+    margin-top: 2rem;
+}
+
+.right-part {
+    width: 40%;
+    text-align: left;
+    margin-left: 2rem;
+}
+
+.icon-rounded {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: $bg-secondary;
+    color: $bg-primary;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 5px ;
+    i {
+        position: relative;
+        top:5px;
+        left: 8px;
+    }
+}
+
+#message .btn-2 {
+    color: $bg-primary;
+    display: inline-block;
+}
+
+.example-text {
+    color: $bg-primary;
 }
 

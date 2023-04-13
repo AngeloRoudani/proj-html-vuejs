@@ -111,6 +111,7 @@
 
     <section id="newsletter">
         <!--sezione "iscriviti alla newsletter"-->
+
         <div class="container">
             <div class="title-wrapper">
                 <SectionTitle2 :smallTitle2="'Newsletter'"
@@ -127,6 +128,50 @@
         </div>
 
     </section>
+
+    <section id="message">
+        <!--Sezione "invia messaggio"-->
+        <div class="container">
+            <div class="left-part">
+
+                <div class="title-wrapper">
+                    <SectionTitle :smallTitle="'send a message'"
+                                    :mainPart="'Get in'"
+                                    :highlightedPart="'Touch'"
+                                    :paragraph="'We will respond to your message as soon as possible.'"
+                        />
+                </div>
+                <div class="form-wrapper">
+                    <FormArea/>
+                </div>
+                <span class="btn-1">send</span>
+                
+
+            </div>
+            <div class="right-part">
+                <h3>Example Inc.</h3>
+                <div class="mt-2 g-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="mt-2 g-text">Quam qui doloremque quae voluptas nisi, harum quidem error dignissimos assumenda dolorum mollitia.</div>
+                <div class="mt-2">
+                    <span class="icon-rounded"><i class="fa-solid fa-phone"></i></span>
+                    <span class="example-text">+1(305) 1234-5678</span>
+                </div>
+                <div class="mt-1">
+                    <span class="icon-rounded"><i class="fa-solid fa-envelope"></i></span>
+                    <span class="example-text">hello@example.com</span>
+                </div>
+                <div class="mt-1">
+                    <span class="icon-rounded"><i class="fa-solid fa-location-dot"></i></span>
+                    <span class="example-text">Main Avenue, 987</span>
+                </div>
+                
+                <span class="btn-2 mt-1">view map</span>
+            </div>
+
+        </div>
+
+    </section>
+
 </template>
 
 <script>
@@ -135,6 +180,7 @@ import MyServiceCard from './MyServiceCard.vue';
 import MyTeamCard from './MyTeamCard.vue';
 import SectionTitle from './SectionTitle.vue';
 import SectionTitle2 from './SectionTitle2.vue';
+import FormArea from './FormArea.vue';
 
     export default {
         name: 'MyMain',
@@ -142,7 +188,8 @@ import SectionTitle2 from './SectionTitle2.vue';
             MyServiceCard,
             MyTeamCard,
             SectionTitle,
-            SectionTitle2
+            SectionTitle2,
+            FormArea
         },
         data () {
             return {
