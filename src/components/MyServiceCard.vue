@@ -1,8 +1,10 @@
 <template>
     <div class="card">
         <div class="icons">
-            <i :class="image" class="icon"></i>
-            <i class="fa-solid fa-arrow-right"></i>
+            <i :class="image" class="icon" v-bind:class="iconChange==true?'newcolor':''"></i>
+            <i class="fa-solid fa-arrow-right" 
+                v-on:mouseover="mouseover" v-on:mouseleave="mouseleave"
+                :class="change==true?'arrow-hover':''"></i>
         </div>
         <h3>{{ title }}</h3>
         <p>{{ info }}</p>
@@ -13,10 +15,26 @@
 
     export default {
         name: 'MyServiceCard',
+        data () {
+            return {
+                change: false,
+                iconChange: false
+            }
+        },
         props: {
             image: String,
             title: String,
             info: String
+        },
+        methods: {
+            mouseover: function () {
+                this.change = true;
+                this.iconChange = true;
+            },
+            mouseleave: function () {
+                this.change = false;
+                this.iconChange = false;
+            },
         }
     }
 
@@ -30,21 +48,21 @@
         flex-direction: column;
     }
     .icons {
-        color: $text-secondary;
         margin-bottom: 1rem;
     }
-
     .icon {
         font-size: 30px;
+        color: $text-secondary;
     }
 
     .fa-arrow-right {
         position: relative;
         left: 200px;
+        color: $text-secondary;
         cursor: pointer;
     }
 
-    .fa-arrow-right:hover {
+    .arrow-hover {
         display: inline-block;
         width: 20px;
         height: 20px;
@@ -53,8 +71,7 @@
         background-color: $text-secondary;
         color: $first-color;
     }
-
-    .fa-arrow-right:hover + .icon {
+    .newcolor {
         color: $first-color;
     }
 
