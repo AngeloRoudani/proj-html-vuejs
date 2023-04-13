@@ -33,15 +33,17 @@
     </section>
 
 
-    <section id="servicies">
+    <section id="services">
         <!--sezione servizi e prodotti-->
         <div class="container">
             <div class="title-wrapper">
-                <h5>Our business area</h5>
-                <h1 class="mt-2 stats-title">Excellence in <span class="highlighted">Services</span></h1>
-                <p class="mt-2 ">We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals.These are some options that you can hire.</p>
-                <span class="btn-2">see all</span>
+                <SectionTitle2 :smallTitle2="'Our business area'"
+                            :mainPart2="'Excellence in'"
+                            :highlightedPart2="'Services'"
+                            :paragraph2="'We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals.These are some options that you can hire.'"
+                />
             </div>
+            <span class="btn-2">see all</span>
             <div class="services-list">
                 <div v-for="(element,index) in servicies" class="product" :key="index"> 
                     <MyServiceCard 

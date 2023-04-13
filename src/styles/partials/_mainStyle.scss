@@ -120,30 +120,34 @@ p {
 }
 /*servizi e prodotti*/
 
-#servicies {
+#services {
     background-color: $first-black;
 }
 
-#servicies p {
+#services p {
     color: $text-third;
     text-align: left;
     display: inline-block;
 }
 
-#servicies .container {
+#services .container {
     text-align: left;
     padding: 4rem 0;
 }
 
 .title-wrapper {
-    width: 91%; 
-    margin: auto;
+    display: inline-block;
+    width: 80%; 
+    margin-left: 3.5rem;
+    color: $first-color;
 }
 
-#servicies .btn-2 {
+#services .btn-2 {
+    display: inline-block;
     color: $first-color;
-    margin-left: 200px;
+    margin-left: 1.5rem;
 }
+
 .services-list {
     display: flex;
     flex-wrap: wrap;
