@@ -21,8 +21,12 @@
     <section id="stats">
         <!--sezione stats azienda-->
         <div class="container">
-            <h5>What are we doing</h5>
-            <h1 class="mt-2 stats-title"><span class="highlighted">Results</span> in Numbers</h1>
+            <div class="title-wrapper">
+                <SectionTitle2 :smallTitle2="'What are we doing'"
+                                        :lastPart2="'in Numbers'"
+                                        :highlightedPart2="'Results'"
+                            />
+            </div>
             <div class="stats-info">
                 <div v-for="(element,index) in statsList" class="minicard" :key="index">
                     <div class="number">{{ element.quantity }}</div>

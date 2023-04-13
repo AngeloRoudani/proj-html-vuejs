@@ -15,32 +15,6 @@
     color: $second-grey;
 }
 
-h5 {
-    color: $text-secondary;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-h1 {
-    font-weight: 900;
-    font-size: 35px;
-}
-
-.highlighted {
-    display: inline-block;
-    padding: .2rem;
-    background-color: $bg-secondary;
-    color: $bg-primary;
-}
-
-p {
-    color: $second-grey;
-    max-width: 70%;
-    margin: auto;
-    text-align: center;
-    font-size: 14px;
-}
-
 /*video section*/
 
 .container {
@@ -91,12 +65,10 @@ p {
     text-align: center;
 }
 
-.stats-title {
+#stats .title-wrapper {
     color: $first-color;
-    span {
-        color:$first-color;
-    }
 }
+
 .stats-info {
     width: 100%;
     display: flex;
