@@ -48,6 +48,7 @@
     border: none;
     border-radius: 3px;
     color: $second-grey;
+    outline: none;
 }
 
 .input-text-icon {
@@ -59,6 +60,7 @@
     border: none;
     border-radius: 3px;
     color: $second-grey;
+    outline: none;
 }
 .input-textarea {
     width: 96.5%;
@@ -69,6 +71,11 @@
     border-radius: 3px;
     color: $second-grey;
     resize: none;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: solid 2px $bg-secondary;
 }
 
 .little-icon {
