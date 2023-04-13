@@ -1,9 +1,7 @@
 <template>
-    <div class="version-2">
         <h5>{{ smallTitle2 }}</h5>
         <div class="mt-1 stats-title">{{ mainPart2 }} <span class="highlighted-white">{{ highlightedPart2 }}</span> {{ lastPart2 }}</div>
         <p class="mt-1 p-white">{{ paragraph2 }}</p>
-    </div>
 
 </template>
 

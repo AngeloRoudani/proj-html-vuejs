@@ -104,7 +104,12 @@
             <article class="articles">
                 <div v-for="(element,index) in article" class="article" :key="index">
                     <img :src="getImageUrl(element.image)" alt="immagine articolo">
+                    <div class="hidden author-info">
+                        <span><i class="fa-regular fa-user"></i>{{ element.author }}</span>
+                        <span><i class="fa-regular fa-clock"></i>{{ element.update }}</span>
+                    </div>
                     <h3>{{ element.title }}</h3>
+                    <div class="hidden paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
                 </div>
             </article>
 
@@ -271,15 +276,21 @@ import FormArea from './FormArea.vue';
                 article: [
                     {
                         image: 'news-1.jpg',
-                        title: 'Increasing creativity is possible for everyone'
+                        title: 'Increasing creativity is possible for everyone',
+                        author: 'Andrea Miller',
+                        update: '2 Days Ago'
                     },
                     {
                         image: 'news-2.jpg',
-                        title: 'Because market research is part of the business plan'
+                        title: 'Because market research is part of the business plan',
+                        author: 'Arya Stark',
+                        update: '1 Days Ago'
                     },
                     {
                         image: 'news-3.jpg',
-                        title: 'Working from home is now a trend'
+                        title: 'Working from home is now a trend',
+                        author: 'Jessica Jones',
+                        update: '3 Hours Ago'
                     }
                 ]
             }

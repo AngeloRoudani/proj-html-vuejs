@@ -231,6 +231,7 @@ p {
     text-align: left;
     margin: 0;
     display: inline-block;
+    color: $first-black;
 }
 
 .news-title {
@@ -253,6 +254,7 @@ p {
     margin-top: 2rem;
     width: calc(100% / 3);
     position: relative;
+    cursor: pointer;
     img {
         width: 100%;
         z-index: 0;
@@ -263,11 +265,45 @@ p {
         width: 80%;
         font-weight: 900;
         position: absolute;
-        bottom: 20px;
+        bottom: 120px;
         left: 28px;
         z-index: 99;
         color: $first-color;
     }
+    .author-info {
+        font-size: 14px;
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        color: $first-color;
+        span, i {
+            margin-right: 10px;
+        }
+        
+
+    }
+    .paragraph {
+        width: 250px;
+        text-align: center;
+        color: $first-color;
+        font-size: 14px;
+        position:absolute;
+        bottom: 70px;
+        left: 30px;
+        
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.article:hover .hidden{
+    display: block;
+}
+
+.article:hover img {
+    filter: blur(1px) brightness(0.4);
 }
 
 /*sezione newsletter*/
@@ -280,6 +316,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3%;
 }
 
 #newsletter .title-wrapper, #newsletter .little-form  {
@@ -318,6 +355,8 @@ p {
 }
 #message .title-wrapper {
     width: 100%;
+    color: black;
+    margin-left: 0;
 }
 
 .form-wrapper {
